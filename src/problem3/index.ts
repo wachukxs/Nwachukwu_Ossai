@@ -8,13 +8,12 @@
  */
 
 function sum_to_n_a(n: number): number {
-    let total: number = 0
     if (Number.isNaN(n) || n < 1) {
-        return total
+        return 0
     }
 	// use while loop
 
-    total = total + n
+    let total = n
     while ((n = n - 1) > 0) {
         total = total + n
     }
@@ -23,12 +22,12 @@ function sum_to_n_a(n: number): number {
 }
 
 function sum_to_n_b(n: number): number {
-    let total: number = 0
     if (Number.isNaN(n) || n < 1) {
-        return total
+        return 0
     }
 	// use for loop
 
+    let total: number = 0
     for (n; n > 0; n--) {
         total = total + n
     }
@@ -49,8 +48,7 @@ function sum_to_n_c(n: number): number {
     if (Number.isNaN(n) || n < 1) {
         return 0
     }
-    let total = n + sum_to_n_c(n - 1)
-    return total
+    return n + sum_to_n_c(n - 1)
 	// use recursion
 }
 
