@@ -1,7 +1,7 @@
 [Backend](https://99tech.notion.site/8dafab98dfaa4365ae7b60ccf8f9b40e?v=76218a75eb3b411fb048a3552d3ed236&pvs=4) submission. For problems 3, 4, and 5. This project uses `yarn`. You can use `npm`.
 
 ### For problem4
-To execute;
+To execute, run;
 ```cmd
 ts-node index.ts
 ```

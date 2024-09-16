@@ -5,19 +5,19 @@
  */
 
 // Time complexity is O(n)
-function sum_to_n_a(n: number): number {
-  if (Number.isNaN(n) || n < 1) {
-    return 0;
-  }
-  // use while loop
+// function sum_to_n_d(n: number): number {
+//   if (Number.isNaN(n) || n < 1) {
+//     return 0;
+//   }
+//   // use while loop
 
-  let total = n;
-  while ((n = n - 1) > 0) {
-    total = total + n;
-  }
+//   let total = n;
+//   while ((n = n - 1) > 0) {
+//     total = total + n;
+//   }
 
-  return total;
-}
+//   return total;
+// }
 
 // Time complexity is O(n)
 function sum_to_n_b(n: number): number {
@@ -42,6 +42,16 @@ function sum_to_n_c(n: number): number {
   // use recursion
 }
 
-console.log("using while loop", sum_to_n_a(5));
-console.log("using for loop", sum_to_n_b(5));
-console.log("using recursion", sum_to_n_c(5));
+// Time complexity of O(1)
+function sum_to_n_a(n: number) {
+  if (Number.isNaN(n) || n < 1) {
+    return 0;
+  }
+  return ((n + 1) * n) / 2;
+}
+
+const TEST_NUMBER = 7;
+
+console.log("using arithmetic sequence", sum_to_n_a(TEST_NUMBER));
+console.log("using for loop", sum_to_n_b(TEST_NUMBER));
+console.log("using recursion", sum_to_n_c(TEST_NUMBER));
