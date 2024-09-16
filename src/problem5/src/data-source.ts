@@ -1,10 +1,10 @@
 import "reflect-metadata";
 import "dotenv/config";
-import { DataSource } from "typeorm";
+import { DataSource, DataSourceOptions } from "typeorm";
 import { Post } from "./entity/Post";
 
 // Used defaults for easing testing by the reviewing team.
-export const AppDataSource = new DataSource({
+const PG_OPTS: DataSourceOptions = {
   type: "postgres",
   host: process.env.PG_DB_HOST || "localhost",
   port: 5432,
@@ -16,4 +16,5 @@ export const AppDataSource = new DataSource({
   entities: [Post],
   migrations: [],
   subscribers: [],
-});
+}
+export const AppDataSource = new DataSource(PG_OPTS);

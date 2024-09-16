@@ -60,15 +60,11 @@ export class PostController {
 
   search = async (request: Request, response: Response) => {
     try {
-      const id = parseInt(request.params.id);
+      const { title = '', content = '' } = request.query;
 
-      const postToRemove = await this.postService.remove(id);
+      const posts = await this.postService.search(title?.toString(), content?.toString());
 
-      if (!postToRemove) {
-        return response.status(410).json({ message: "Post does not exist" });
-      }
-
-      return response.json({ message: "Post deleted" });
+      return response.json({ posts });
     } catch (error) {
       response.status(500).json({ message: this.GENERIC_ERROR_MESSAGE });
     }
