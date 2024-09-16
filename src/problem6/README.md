@@ -47,14 +47,14 @@ Security
 
 ---
 
-Every payload will contain the user's last score - and we use jwt to make sure the data from the user isn't tampered. As opposed to fetching the db for the user's last score (reduce number of query)
+Every payload will contain the user's last score - and we use jwt to make sure the data from the user isn't tampered. As opposed to fetching from the db for the user's last score (reduce the number of query)
 
 ---
 
 Assuming the time the validator services uses to validate a work is O(1)
 New request -> Load Balancer? -> Auth -> Validator Service -> Event Queue (or Bus) -> [DB, Cache]
 
-Diagram:
+Diagram (view with white background):
 
 
 ![system design diagram](99Tech_problem6.drawio.png)
