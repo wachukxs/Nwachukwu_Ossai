@@ -5,13 +5,23 @@ export class PostService {
   private userRepository = AppDataSource.getRepository(Post);
 
   async all() {
-    return this.userRepository.find();
+    try {
+      return this.userRepository.find();
+    } catch (error) {
+      console.error(error)
+      return null
+    }
   }
 
   async one(id: number) {
-    return this.userRepository.findOne({
-      where: { id },
-    });
+    try {
+      return this.userRepository.findOne({
+        where: { id },
+      });
+    } catch (error) {
+      console.error(error)
+      return null
+    }
   }
 
   async save(body: any) {

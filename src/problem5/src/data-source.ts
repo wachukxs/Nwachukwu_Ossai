@@ -10,18 +10,10 @@ export const AppDataSource = new DataSource({
   port: 5432,
   username: process.env.PG_DB_USERNAME || "postgres",
   password: process.env.PG_DB_PASSWORD,
-  database: process.env.PG_DB_NAME || "media99",
-  synchronize: false,
+  database: process.env.PG_DB_NAME || "postgres",
+  synchronize: true,
   logging: false,
   entities: [Post],
-//   migrations: ["../migrations/**.ts"],
+  migrations: [],
   subscribers: [],
-})
-
-// AppDataSource.initialize().catch((error) => console.log(error))
-AppDataSource
-.initialize()
-.then(() => {
-    console.log('connected to db')
-})
-.catch((error) => console.log('db connection err', error));
+});

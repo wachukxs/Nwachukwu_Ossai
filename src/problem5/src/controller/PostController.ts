@@ -11,6 +11,7 @@ export class PostController {
       const posts = await this.postService.all();
       response.json({ posts });
     } catch (error) {
+      console.error(error);
       response.status(500).json({ message: this.GENERIC_ERROR_MESSAGE });
     }
   };
@@ -21,8 +22,13 @@ export class PostController {
 
       const post = await this.postService.one(id);
 
+      if (!post) {
+        return response.status(204).json();
+      }
+
       response.json({ post });
     } catch (error) {
+      console.error(error);
       response.status(500).json({ message: this.GENERIC_ERROR_MESSAGE });
     }
   };

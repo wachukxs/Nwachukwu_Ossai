@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "BE Task, Problem 5",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "typeorm": "typeorm-ts-node-commonjs",
     "start": "ts-node src/server.ts",
     "dev": "ts-node src/server.ts"
@@ -24,7 +24,13 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.13",
+    "@types/mocha": "^10.0.8",
     "@types/node": "^22.5.4",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
