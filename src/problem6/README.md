@@ -56,5 +56,4 @@ New request -> Load Balancer? -> Auth -> Validator Service -> Event Queue (or Bu
 
 Diagram (view with white background):
 
-
 ![system design diagram](99Tech_problem6.drawio.png)
