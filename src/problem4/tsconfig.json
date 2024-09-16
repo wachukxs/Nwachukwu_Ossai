@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["es5", "es6", "DOM"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  }
+}

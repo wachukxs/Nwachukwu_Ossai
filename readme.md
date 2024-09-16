@@ -1,5 +1,11 @@
 [Backend](https://99tech.notion.site/8dafab98dfaa4365ae7b60ccf8f9b40e?v=76218a75eb3b411fb048a3552d3ed236&pvs=4) submission. For problems 3, 4, and 5. This project uses `yarn`. You can use `npm`.
 
+### For problem4
+To execute;
+```cmd
+ts-node index.ts
+```
+
 ### For problem5
 
 The JD says 99Tech uses PostgreSQL. If you have PostgreSQL installed with default settings (with default database "postgre", and default user "postgre" without password). Then;
@@ -21,6 +27,9 @@ To run test, run;
 ```cmd
 yarn run test
 ```
+
+### For problem6
+Check the **README.md** file.
 
 > Cloned from https://github.com/99techteam/code-challenge/tree/main
 
