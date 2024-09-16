@@ -5,21 +5,6 @@
  */
 
 // Time complexity is O(n)
-// function sum_to_n_d(n: number): number {
-//   if (Number.isNaN(n) || n < 1) {
-//     return 0;
-//   }
-//   // use while loop
-
-//   let total = n;
-//   while ((n = n - 1) > 0) {
-//     total = total + n;
-//   }
-
-//   return total;
-// }
-
-// Time complexity is O(n)
 function sum_to_n_b(n: number): number {
   if (Number.isNaN(n) || n < 1) {
     return 0;
