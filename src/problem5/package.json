@@ -6,7 +6,9 @@
     "test": "jest --detectOpenHandles",
     "typeorm": "typeorm-ts-node-commonjs",
     "start": "ts-node src/server.ts",
-    "dev": "ts-node src/server.ts"
+    "start-lite": "ts-node src/server.ts --db=sqlite3",
+    "dev": "ts-node src/server.ts",
+    "dev-lite" : "ts-node src/server.ts --db=sqlite3"
   },
   "main": "app.ts",
   "author": "@wachukxs",

@@ -1,15 +1,18 @@
-Backend submission - https://99tech.notion.site/8dafab98dfaa4365ae7b60ccf8f9b40e?v=76218a75eb3b411fb048a3552d3ed236&pvs=4
+[Backend](https://99tech.notion.site/8dafab98dfaa4365ae7b60ccf8f9b40e?v=76218a75eb3b411fb048a3552d3ed236&pvs=4) submission. For problems 3,4, and 5. This project uses `yarn`.
 
-See problems, 3,4, and 5.
-
-To execute, for instance run;
+The JD says 99Tech uses PostgreSQL. If you have PostgreSQL installed with default settings (with default database "postgre", and default user "postgre" without password). Then;
+To execute with postgre, run;
 ```cmd
-npx tsx index.ts
+yarn run start
+```
+If not, you can execute with sqlite3 (no db setup required), run;
+```cmd
+yarn run start-lite
 ```
 
-- - -
 > Cloned from https://github.com/99techteam/code-challenge/tree/main
 
+- - -
 
 # 99Tech Code Challenge #1 #
 
